@@ -1354,16 +1354,16 @@
 <!-- TOP BAR -->
 <div class="topbar" role="navigation" aria-label="Barre sociale">
     <div class="topbar-socials">
-        <a href="https://www.linkedin.com/in/jason-mukombela-0b9952296" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn - Profil professionnel">
+        <a href="https://www.linkedin.com/in/jason-mukombela-0b9952296/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn - Profil professionnel">
             <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
-        <a href="https://wa.me/243971108969" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp - Contact direct">
+        <a href="https://wa.me/243971108969?text=Bonjour%20Jason%2C%20je%20viens%20de%20visiter%20votre%20portfolio%20et%20je%20souhaite%20en%20savoir%20plus." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp - Contact direct">
             <i class="fab fa-whatsapp" aria-hidden="true"></i>
         </a>
         <a href="mailto:jasonmukombela@gmail.com" aria-label="Email - Envoyer un message">
             <i class="fas fa-envelope" aria-hidden="true"></i>
         </a>
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook - Page officielle">
+        <a href="https://www.facebook.com/jason.mukombela/" target="_blank" rel="noopener noreferrer" aria-label="Facebook - Page officielle">
             <i class="fab fa-facebook" aria-hidden="true"></i>
         </a>
     </div>
@@ -1689,6 +1689,9 @@
                 <a id="modalQuoteBtn" href="#contact" onclick="closeModal()" class="btn btn-orange" style="font-size:0.85rem; flex:1;">
                     <i class="fas fa-paper-plane" aria-hidden="true"></i> Demander un projet similaire
                 </a>
+                <a id="modalWhatsappBtn" href="https://wa.me/243971108969" target="_blank" rel="noopener noreferrer" class="btn" style="background:#25d366; color:#fff; font-size:0.85rem; flex:1;">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+                </a>
                 <button onclick="alert('La fiche technique complète en PDF sera disponible en téléchargement sous peu.')" class="btn btn-primary" style="font-size:0.85rem; flex:1;">
                     <i class="fas fa-file-pdf" aria-hidden="true"></i> Fiche PDF
                 </button>
@@ -1970,13 +1973,16 @@
                 <h5>Jason Mukombela</h5>
                 <p>Ingénieur mécanicien spécialisé en modélisation 3D CAO, calcul de structures et formateur de compétences techniques.</p>
                 <div class="footer-social" style="margin-top: 14px;">
-                    <a href="https://www.linkedin.com/in/jason-mukombela-0b9952296" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/jason-mukombela-0b9952296/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn - Profil professionnel">
                         <i class="fab fa-linkedin" aria-hidden="true"></i>
                     </a>
-                    <a href="https://wa.me/243971108969" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <a href="https://www.facebook.com/jason.mukombela/" target="_blank" rel="noopener noreferrer" aria-label="Facebook - Page officielle">
+                        <i class="fab fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://wa.me/243971108969?text=Bonjour%20Jason%2C%20je%20souhaite%20discuter%20d%27un%20projet." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp - Contact direct">
                         <i class="fab fa-whatsapp" aria-hidden="true"></i>
                     </a>
-                    <a href="mailto:jasonmukombela@gmail.com" aria-label="Email">
+                    <a href="mailto:jasonmukombela@gmail.com" aria-label="Email - Envoyer un message">
                         <i class="fas fa-envelope" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -2021,7 +2027,11 @@
 </footer>
 
 <!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/243971108969?text=Bonjour%20Jason,%20je%20souhaite%20en%20savoir%20plus." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contacter via WhatsApp">
+<a href="https://wa.me/243971108969?text=Bonjour%20Jason%2C%20je%20viens%20de%20visiter%20votre%20portfolio%20et%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services%20de%20conception%20CAO%20%2F%20formations." 
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   aria-label="Contacter Jason via WhatsApp">
     <i class="fab fa-whatsapp" aria-hidden="true"></i>
 </a>
 
@@ -2468,6 +2478,11 @@
 
     function renderServiceCard(service) {
         const features = service.features.map(f => `<li><i class="fas fa-check" aria-hidden="true"></i> ${f}</li>`).join('');
+        
+        // Encoder le titre du service pour WhatsApp
+        const whatsappMessage = encodeURIComponent(`Bonjour Jason, je suis intéressé par votre service : ${service.title}. Pouvez-vous m'en dire plus ?`);
+        const whatsappLink = `https://wa.me/243971108969?text=${whatsappMessage}`;
+        
         return `
             <div class="service-card" role="listitem">
                 <img src="${service.img}" alt="${service.title}" class="service-img" loading="lazy">
@@ -2475,7 +2490,12 @@
                     <h3 class="service-title">${service.title}</h3>
                     <p class="service-desc">${service.desc}</p>
                     <ul class="service-features">${features}</ul>
-                    <a href="#contact" class="btn ${service.btnClass}" style="text-align:center; min-height:44px;">${service.btnText}</a>
+                    <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                        <a href="#contact" class="btn ${service.btnClass}" style="text-align:center; min-height:44px; flex:1;">${service.btnText}</a>
+                        <a href="${whatsappLink}" target="_blank" rel="noopener noreferrer" class="btn" style="background:#25d366; color:#fff; min-height:44px; min-width:44px; padding:8px 12px;" aria-label="Contacter via WhatsApp pour ${service.title}">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         `;
@@ -2534,6 +2554,14 @@
         document.getElementById('modalDesc').textContent = desc;
         document.getElementById('modalImg').src = imgSrc;
         document.getElementById('modalImg').alt = title;
+        
+        // Mettre à jour le lien WhatsApp du modal
+        const whatsappModalBtn = document.getElementById('modalWhatsappBtn');
+        if (whatsappModalBtn) {
+            const message = encodeURIComponent(`Bonjour Jason, je suis intéressé par un projet similaire à : ${title}. Pouvez-vous me faire un devis ?`);
+            whatsappModalBtn.href = `https://wa.me/243971108969?text=${message}`;
+        }
+        
         document.getElementById('projectModal').classList.add('active');
         document.body.style.overflow = 'hidden';
     }
@@ -2778,7 +2806,7 @@
     });
 
     // ============================================================
-    // FORMULAIRE
+    // FORMULAIRE - ENVOI DIRECT VERS L'EMAIL DE JASON
     // ============================================================
     const contactForm = document.getElementById('contactForm');
     const formFeedback = document.getElementById('formFeedback');
@@ -2788,6 +2816,8 @@
         
         const nom = document.getElementById('nom').value.trim();
         const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const sujet = document.getElementById('sujet').value;
         const message = document.getElementById('message').value.trim();
         
         if (!nom || !email || !message) {
@@ -2802,13 +2832,43 @@
             return;
         }
         
-        formFeedback.textContent = '✅ Message envoyé avec succès !';
-        formFeedback.style.color = '#4CAF50';
-        this.reset();
+        // Préparer le sujet de l'email
+        let sujetTexte = '';
+        switch(sujet) {
+            case 'devis':
+                sujetTexte = 'Demande de devis CAO (BlueBrain Engineering)';
+                break;
+            case 'formation':
+                sujetTexte = 'Inscription Formation (Yekola Skills)';
+                break;
+            default:
+                sujetTexte = 'Autre demande';
+        }
         
+        // Construire le corps de l'email
+        const corpsEmail = 
+            `Nom complet : ${nom}%0A` +
+            `Email : ${email}%0A` +
+            `Téléphone : ${phone || 'Non renseigné'}%0A` +
+            `Sujet : ${sujetTexte}%0A%0A` +
+            `Message :%0A${message}%0A%0A` +
+            `---%0A` +
+            `Message envoyé depuis le portfolio de Jason Mukombela`;
+        
+        // Ouvrir le client email avec le message pré-rempli
+        const mailtoLink = `mailto:jasonmukombela@gmail.com?subject=${encodeURIComponent(sujetTexte)}&body=${corpsEmail}`;
+        
+        // Ouvrir le client email
+        window.location.href = mailtoLink;
+        
+        formFeedback.textContent = '✅ Votre client email va s\'ouvrir avec le message pré-rempli. Envoyez-le pour contacter Jason.';
+        formFeedback.style.color = '#4CAF50';
+        
+        // Réinitialiser le formulaire après un délai
         setTimeout(() => {
+            this.reset();
             formFeedback.textContent = '';
-        }, 5000);
+        }, 6000);
     });
 
     // ============================================================
