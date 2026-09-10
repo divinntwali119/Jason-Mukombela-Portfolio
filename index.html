@@ -1,0 +1,2459 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Jason Mukombela - Ingénieur Mécanicien spécialisé en conception CAO 3D, modélisation SolidWorks, calcul de structures et formation à Kinshasa. Portfolio officiel." />
+    <title>Jason Mukombela - Portfolio & Conception CAO 3D</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ============================================================
+           STYLES OPTIMISÉS
+           ============================================================ */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --bg-dark: #0a0d12;
+            --bg-card: #121820;
+            --bg-topbar: #080b0f;
+            --bg-header: rgba(10, 13, 18, 0.96);
+            --blue: #1a5fb4;
+            --blue-hover: #0f4a8a;
+            --orange: #d45a1a;
+            --text-light: #eef2f6;
+            --text-muted: #98a2b3;
+            --border-color: #1e2937;
+            --font: 'Inter', system-ui, sans-serif;
+            --star-color: #f39c12;
+            --gradient-gallery: linear-gradient(135deg, #0a0d12 0%, #1a1f2e 100%);
+        }
+
+        body.light-mode {
+            --bg-dark: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-topbar: #f1f5f9;
+            --bg-header: rgba(255, 255, 255, 0.96);
+            --text-light: #0f172a;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --gradient-gallery: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            background: var(--bg-dark);
+            color: var(--text-light);
+            font-family: var(--font);
+            line-height: 1.5;
+            overflow-x: hidden;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 18px; }
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            padding-bottom: 8px;
+            margin-bottom: 6px;
+            color: var(--text-light);
+        }
+        .section-sub { color: var(--text-muted); margin-bottom: 24px; font-size: 0.9rem; }
+
+        /* TOP BAR */
+        .topbar {
+            background: var(--bg-topbar);
+            padding: 8px 18px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .topbar-socials { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+        .topbar-socials a { 
+            color: var(--text-muted); 
+            transition: color 0.2s; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 6px; 
+            font-size: 0.9rem;
+            padding: 4px 6px;
+            border-radius: 4px;
+        }
+        .topbar-socials a:hover { 
+            color: var(--text-light); 
+            background: rgba(255,255,255,0.05);
+        }
+        .topbar-tagline { font-size: 0.78rem; color: var(--text-muted); font-weight: 500; }
+
+        /* HEADER */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--bg-header);
+            backdrop-filter: blur(8px);
+            padding: 12px 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .logo { font-weight: 800; font-size: 1.1rem; }
+        .logo span { color: var(--orange); }
+        nav.desktop ul { display: flex; list-style: none; gap: 20px; align-items: center; }
+        nav.desktop a { 
+            color: var(--text-muted); 
+            font-weight: 500; 
+            font-size: 0.85rem; 
+            transition: 0.2s;
+            padding: 4px 2px;
+            border-bottom: 2px solid transparent;
+        }
+        nav.desktop a:hover { 
+            color: var(--text-light); 
+            border-bottom-color: var(--orange);
+        }
+        .btn-nav {
+            background: var(--orange); 
+            color: #fff !important;
+            padding: 6px 16px; 
+            border-radius: 4px; 
+            font-weight: 600; 
+            font-size: 0.78rem;
+            border-bottom: none !important;
+        }
+        .btn-nav:hover {
+            background: #b84a14 !important;
+            border-bottom: none !important;
+        }
+        .header-actions { display: flex; align-items: center; gap: 14px; }
+        
+        .theme-toggle {
+            background: transparent; 
+            border: none; 
+            color: var(--text-muted);
+            font-size: 1.1rem; 
+            cursor: pointer; 
+            padding: 8px; 
+            transition: color 0.2s;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 40px;
+            min-height: 40px;
+        }
+        .theme-toggle:hover { 
+            color: var(--text-light); 
+            background: rgba(255,255,255,0.05);
+        }
+
+        .burger { 
+            display: none; 
+            font-size: 1.4rem; 
+            cursor: pointer; 
+            color: var(--text-light);
+            padding: 8px;
+            background: none;
+            border: none;
+            min-width: 44px;
+            min-height: 44px;
+        }
+        @media (max-width: 900px) { 
+            nav.desktop { display: none; } 
+            .burger { display: block; } 
+        }
+
+        /* DRAWER MOBILE */
+        .drawer {
+            position: fixed; 
+            top: 0; 
+            left: -280px; 
+            width: 260px; 
+            height: 100%;
+            background: var(--bg-card); 
+            padding: 30px 20px; 
+            transition: left 0.3s; 
+            z-index: 2000;
+            overflow-y: auto;
+        }
+        .drawer.open { left: 0; }
+        .drawer .close-btn { 
+            text-align: right; 
+            font-size: 1.6rem; 
+            cursor: pointer; 
+            color: var(--text-muted);
+            background: none;
+            border: none;
+            padding: 8px;
+            min-width: 44px;
+            min-height: 44px;
+        }
+        .drawer ul { list-style: none; margin-top: 20px; }
+        .drawer ul li { margin-bottom: 16px; }
+        .drawer ul a { 
+            color: var(--text-light); 
+            font-weight: 500; 
+            font-size: 0.95rem;
+            display: block;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .drawer ul a:hover { background: rgba(255,255,255,0.05); }
+        .drawer-overlay { 
+            position: fixed; 
+            inset: 0; 
+            background: rgba(0,0,0,0.6); 
+            z-index: 1999; 
+            display: none; 
+        }
+        .drawer-overlay.active { display: block; }
+
+        /* HERO */
+        #home {
+            position: relative;
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            background: url('images/machine de production.jpg') center/cover no-repeat;
+        }
+        #home .overlay {
+            position: absolute; 
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.7) 100%);
+        }
+        body.light-mode #home .overlay {
+            background: linear-gradient(180deg, rgba(248, 250, 252, 0.5) 0%, rgba(248, 250, 252, 0.7) 100%);
+        }
+        #home .container { position: relative; z-index: 2; width: 100%; }
+        .hero-title {
+            font-size: clamp(2.2rem, 6vw, 3.8rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1.08;
+            letter-spacing: -0.5px;
+        }
+        .hero-sub { font-size: 1.05rem; color: var(--text-muted); margin: 12px 0 24px; max-width: 600px; }
+        .btn-group { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
+        .btn {
+            padding: 12px 24px; 
+            font-weight: 600;
+            background: var(--bg-card); 
+            color: var(--text-light); 
+            transition: 0.2s; 
+            cursor: pointer; 
+            font-size: 0.85rem; 
+            border: none;
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 8px;
+            border-radius: 4px;
+            min-height: 48px;
+            min-width: 48px;
+        }
+        .btn-primary { background: var(--blue); color: #fff; }
+        .btn-primary:hover { background: var(--blue-hover); }
+        .btn-orange { background: var(--orange); color: #fff; }
+        .btn-orange:hover { background: #b84a14; }
+
+        /* STATISTIQUES */
+        .stats-full-width { width: 100%; background: var(--bg-card); padding: 24px 0; }
+        .stats-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .stat-item { text-align: center; flex: 1; min-width: 80px; }
+        .stat-item .number { font-size: clamp(1.1rem, 4vw, 1.8rem); font-weight: 800; color: var(--orange); line-height: 1.1; }
+        .stat-item .label { font-size: clamp(0.55rem, 2.2vw, 0.75rem); color: var(--text-muted); display: block; margin-top: 2px; }
+
+        /* ABOUT */
+        .about-wrap { display: grid; grid-template-columns: 1fr 1.2fr; gap: 32px; align-items: center; }
+        .about-image-box { width: 100%; height: 360px; border-radius: 0; overflow: hidden; }
+        .about-image-box img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
+        .about-text h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 10px; color: var(--text-light); }
+        .about-text p { color: var(--text-muted); margin-bottom: 12px; font-size: 0.92rem; line-height: 1.6; }
+        .about-skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 16px; margin-bottom: 20px; }
+        .skill-item { background: var(--bg-card); padding: 10px 14px; font-size: 0.82rem; font-weight: 600; display: flex; align-items: center; gap: 8px; border-radius: 4px; }
+        .skill-item i { color: var(--orange); }
+        @media (max-width: 768px) {
+            .about-wrap { grid-template-columns: 1fr; gap: 20px; }
+            .about-image-box { height: 280px; order: 1; }
+            .about-text { order: 2; }
+            .about-skills { grid-template-columns: 1fr; }
+        }
+
+        /* GALERIE */
+        #gallery {
+            padding: 70px 0 80px;
+            background: var(--gradient-gallery);
+            position: relative;
+            overflow: hidden;
+        }
+        #gallery::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 50%, rgba(212, 90, 26, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(26, 95, 180, 0.06) 0%, transparent 40%);
+            z-index: 0;
+            pointer-events: none;
+        }
+        #gallery .container { position: relative; z-index: 1; }
+
+        .gallery-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 36px;
+        }
+        .gallery-header .section-title {
+            font-size: 1.6rem;
+            margin-bottom: 4px;
+            color: var(--text-light);
+        }
+        .gallery-header .section-sub {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+        .gallery-header .gallery-badge {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--bg-card);
+            padding: 8px 20px 8px 18px;
+            border-radius: 0;
+            border: 1px solid var(--border-color);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .gallery-header .gallery-badge i {
+            color: var(--orange);
+            font-size: 1rem;
+        }
+        .gallery-header .gallery-badge strong {
+            color: var(--text-light);
+            font-weight: 700;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 220px;
+            gap: 18px;
+        }
+        .gallery-grid .gallery-item:nth-child(1) { grid-row: span 2; }
+        .gallery-grid .gallery-item:nth-child(2) { grid-column: span 2; grid-row: span 1; }
+        .gallery-grid .gallery-item:nth-child(4) { grid-row: span 2; }
+        .gallery-grid .gallery-item:nth-child(6) { grid-column: span 2; grid-row: span 1; }
+        .gallery-grid .gallery-item:nth-child(8) { grid-row: span 2; }
+
+        @media (max-width: 992px) {
+            .gallery-grid { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 200px; }
+            .gallery-grid .gallery-item:nth-child(1),
+            .gallery-grid .gallery-item:nth-child(4),
+            .gallery-grid .gallery-item:nth-child(8) { grid-row: span 2; }
+            .gallery-grid .gallery-item:nth-child(2),
+            .gallery-grid .gallery-item:nth-child(6) { grid-column: span 2; }
+        }
+        @media (max-width: 768px) {
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; gap: 12px; }
+            .gallery-grid .gallery-item:nth-child(1),
+            .gallery-grid .gallery-item:nth-child(4),
+            .gallery-grid .gallery-item:nth-child(8) { grid-row: span 1; }
+            .gallery-grid .gallery-item:nth-child(2),
+            .gallery-grid .gallery-item:nth-child(6) { grid-column: span 1; }
+        }
+        @media (max-width: 480px) {
+            .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 140px; gap: 8px; }
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+            background: var(--bg-card);
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            z-index: 10;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-item .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(10,13,18,0.85) 0%, rgba(10,13,18,0.2) 60%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px 18px 18px;
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        .gallery-overlay .gallery-tag {
+            display: inline-block;
+            background: var(--orange);
+            color: #fff;
+            font-size: 0.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 3px 12px;
+            border-radius: 0;
+            margin-bottom: 6px;
+            width: fit-content;
+        }
+        .gallery-overlay h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 2px;
+        }
+        .gallery-overlay p {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.7);
+            margin: 0;
+        }
+        .gallery-overlay .gallery-icon {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(4px);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 0.85rem;
+            transition: background 0.3s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .gallery-item:hover .gallery-icon {
+            background: var(--orange);
+        }
+
+        .gallery-footer {
+            text-align: center;
+            margin-top: 38px;
+        }
+        .gallery-footer .btn-gallery {
+            background: transparent;
+            border: 2px solid var(--orange);
+            color: var(--text-light);
+            padding: 12px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            min-height: 48px;
+        }
+        .gallery-footer .btn-gallery:hover {
+            background: var(--orange);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(212, 90, 26, 0.3);
+        }
+        .gallery-footer .btn-gallery i {
+            transition: transform 0.3s;
+        }
+        .gallery-footer .btn-gallery:hover i {
+            transform: translateX(4px);
+        }
+
+        /* PORTFOLIO 3D */
+        .portfolio-grid-wrapper {
+            position: relative;
+        }
+        .card-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+            gap: 20px; 
+            margin-top: 16px; 
+        }
+        .portfolio-card { 
+            background: var(--bg-card); 
+            border-radius: 0; 
+            overflow: hidden; 
+            display: flex; 
+            flex-direction: column; 
+            transition: transform 0.2s; 
+        }
+        .portfolio-card:hover { transform: translateY(-4px); }
+        .portfolio-img-wrap { height: 190px; width: 100%; overflow: hidden; }
+        .portfolio-img-wrap img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
+        .portfolio-body { padding: 18px; display: flex; flex-direction: column; flex-grow: 1; }
+        .portfolio-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
+        .portfolio-desc { font-size: 0.83rem; color: var(--text-muted); margin-bottom: 14px; flex-grow: 1; }
+
+        .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+        .filter-btn { 
+            background: transparent; 
+            border: none; 
+            color: var(--text-muted); 
+            padding: 8px 16px; 
+            cursor: pointer; 
+            font-size: 0.8rem; 
+            font-weight: 500; 
+            transition: 0.2s;
+            border-radius: 4px;
+            min-height: 40px;
+        }
+        .filter-btn.active, .filter-btn:hover { background: var(--blue); color: #fff; }
+
+        /* PAGINATION */
+        .pagination-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            margin-top: 28px;
+            flex-wrap: wrap;
+        }
+        .pagination-wrapper .page-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 8px 14px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: 0.2s;
+            min-width: 40px;
+            min-height: 40px;
+            text-align: center;
+            border-radius: 4px;
+        }
+        .pagination-wrapper .page-btn:hover:not(:disabled) {
+            background: var(--blue);
+            color: #fff;
+            border-color: var(--blue);
+        }
+        .pagination-wrapper .page-btn.active {
+            background: var(--orange);
+            color: #fff;
+            border-color: var(--orange);
+        }
+        .pagination-wrapper .page-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        .pagination-wrapper .page-btn:disabled:hover {
+            background: var(--bg-card);
+            color: var(--text-muted);
+            border-color: var(--border-color);
+        }
+        .pagination-info {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin: 0 8px;
+        }
+
+        /* SERVICES & FORMATIONS */
+        .services-grid-wrapper {
+            position: relative;
+        }
+        .service-card { background: var(--bg-card); border-radius: 0; overflow: hidden; display: flex; flex-direction: column; }
+        .service-img { height: 190px; width: 100%; object-fit: cover; border-radius: 0; }
+        .service-body { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
+        .service-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
+        .service-desc { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px; flex-grow: 1; line-height: 1.5; }
+        .service-features { list-style: none; margin-bottom: 18px; font-size: 0.8rem; color: var(--text-light); }
+        .service-features li { margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+        .service-features i { color: var(--orange); font-size: 0.75rem; }
+
+        /* RESSOURCES */
+        #resources {
+            padding: 50px 0;
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 16px;
+        }
+        .resource-card {
+            background: var(--bg-dark);
+            padding: 28px 24px 24px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border-radius: 8px;
+        }
+        .resource-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+        .resource-icon { font-size: 2.8rem; color: var(--orange); margin-bottom: 12px; }
+        .resource-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
+        .resource-card p { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 16px; flex-grow: 1; }
+        .resource-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+        .resource-actions .btn { padding: 8px 18px; font-size: 0.78rem; flex: 1; min-width: 100px; justify-content: center; min-height: 40px; }
+        .btn-preview { background: var(--blue); color: #fff; }
+        .btn-preview:hover { background: var(--blue-hover); }
+        .btn-download { background: var(--orange); color: #fff; }
+        .btn-download:hover { background: #b84a14; }
+
+        /* MODALE PDF */
+        .pdf-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: #000;
+            z-index: 5000;
+            align-items: center;
+            justify-content: center;
+        }
+        .pdf-modal.active {
+            display: flex;
+        }
+        .pdf-modal-content {
+            width: 100vw;
+            height: 100vh;
+            background: #000;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .pdf-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 24px;
+            background: rgba(0, 0, 0, 0.9);
+            flex-shrink: 0;
+            z-index: 10;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .pdf-modal-header h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+        .pdf-modal-header .close-pdf {
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-muted);
+            transition: color 0.2s;
+            line-height: 1;
+            background: none;
+            border: none;
+            padding: 0 8px;
+            min-width: 44px;
+            min-height: 44px;
+        }
+        .pdf-modal-header .close-pdf:hover {
+            color: #fff;
+        }
+        .pdf-modal-body {
+            flex: 1;
+            overflow: hidden;
+            background: #000;
+            position: relative;
+        }
+        .pdf-modal-body iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: #fff;
+        }
+        .pdf-modal-body .pdf-fallback {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: var(--text-muted);
+            padding: 30px;
+            text-align: center;
+            background: #000;
+        }
+        .pdf-modal-body .pdf-fallback i {
+            font-size: 4rem;
+            color: var(--orange);
+            margin-bottom: 16px;
+        }
+        .pdf-modal-body .pdf-fallback .btn {
+            margin-top: 16px;
+        }
+
+        /* MODALE PROJET */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 3000;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+        .modal.active {
+            display: flex;
+        }
+        .modal-content {
+            background: var(--bg-dark);
+            width: 100vw;
+            height: 100vh;
+            padding: 24px 32px;
+            position: relative;
+            overflow-y: auto;
+            border: none;
+            border-radius: 0;
+        }
+        .modal-content .close-modal {
+            position: absolute;
+            top: 12px;
+            right: 20px;
+            font-size: 2.2rem;
+            cursor: pointer;
+            color: var(--text-muted);
+            transition: color 0.2s;
+            line-height: 1;
+            background: none;
+            border: none;
+            min-width: 44px;
+            min-height: 44px;
+        }
+        .modal-content .close-modal:hover {
+            color: #fff;
+        }
+        .modal-img-container {
+            width: 100%;
+            max-height: 55vh;
+            overflow: hidden;
+            margin: 16px 0 20px;
+            background: var(--bg-card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-img-container img {
+            width: 100%;
+            height: auto;
+            max-height: 55vh;
+            object-fit: contain;
+        }
+
+        .modal-specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 14px;
+            margin: 16px 0 20px;
+            background: rgba(255, 255, 255, 0.04);
+            padding: 16px 18px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+        .spec-item {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .spec-item strong {
+            display: block;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 4px;
+        }
+        .modal-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+        }
+        .modal-actions .btn {
+            flex: 1;
+            min-width: 140px;
+            padding: 12px 20px;
+            font-size: 0.85rem;
+            min-height: 48px;
+        }
+
+        @media (max-width: 600px) {
+            .modal-content {
+                padding: 16px;
+            }
+            .modal-specs-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            .modal-img-container {
+                max-height: 35vh;
+            }
+            .modal-img-container img {
+                max-height: 35vh;
+            }
+            .modal-actions .btn {
+                flex: 1 1 100%;
+            }
+            .pdf-modal-header {
+                padding: 8px 14px;
+            }
+            .pdf-modal-header h3 {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* CARROUSEL TÉMOIGNAGES */
+        .testimonial-carousel-wrapper { position: relative; overflow: hidden; padding: 10px 0; }
+        .testimonial-track { display: flex; transition: transform 0.4s ease-in-out; gap: 20px; }
+        .testimonial-card { min-width: calc(33.333% - 14px); background: var(--bg-card); padding: 24px; display: flex; flex-direction: column; justify-content: space-between; border-radius: 0; }
+        @media (max-width: 900px) { .testimonial-card { min-width: calc(50% - 10px); } }
+        @media (max-width: 600px) { .testimonial-card { min-width: 100%; } }
+
+        .testimonial-stars { color: var(--star-color); margin-bottom: 10px; font-size: 0.85rem; }
+        .testimonial-user { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+        .testimonial-user img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; }
+        .testimonial-info h5 { font-size: 0.95rem; font-weight: 700; }
+        .testimonial-info span { font-size: 0.75rem; color: var(--text-muted); }
+        .testimonial-text { font-size: 0.85rem; color: var(--text-muted); font-style: italic; line-height: 1.5; }
+
+        .carousel-controls { display: flex; justify-content: center; gap: 12px; margin-top: 18px; }
+        .carousel-btn { 
+            background: var(--bg-card); 
+            border: none; 
+            color: var(--text-light); 
+            width: 36px; 
+            height: 36px; 
+            cursor: pointer; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            border-radius: 50%;
+            transition: background 0.2s;
+            min-width: 44px;
+            min-height: 44px;
+        }
+        .carousel-btn:hover { background: var(--blue); color: #fff; }
+
+        /* CONTACT */
+        .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .contact-info-card { background: var(--bg-card); padding: 22px; margin-bottom: 16px; border-radius: 8px; }
+        .contact-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px; }
+        .contact-item i { color: var(--orange); font-size: 1.1rem; margin-top: 3px; }
+        .contact-item h6 { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
+        .contact-item p { font-size: 0.95rem; font-weight: 600; }
+        
+        form label {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        form input, form select, form textarea {
+            width: 100%; 
+            background: var(--bg-card); 
+            border: 1px solid var(--border-color);
+            padding: 11px 14px; 
+            color: var(--text-light); 
+            font-family: var(--font);
+            font-size: 0.88rem; 
+            outline: none; 
+            border-radius: 4px;
+            transition: border-color 0.2s;
+        }
+        form input:focus, form select:focus, form textarea:focus {
+            border-color: var(--orange);
+        }
+        form .form-group {
+            margin-bottom: 12px;
+        }
+        
+        .map-container { overflow: hidden; height: 100%; min-height: 250px; border-radius: 8px; }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
+        @media (max-width: 768px) { .contact-wrap { grid-template-columns: 1fr; } }
+
+        /* FAQ ACCORDION */
+        .accordion-item { padding: 14px 0; border-bottom: 1px solid var(--border-color); }
+        .accordion-item:last-child { border-bottom: none; }
+        .accordion-header { 
+            display: flex; 
+            justify-content: space-between; 
+            cursor: pointer; 
+            font-weight: 600; 
+            font-size: 0.92rem;
+            padding: 8px 4px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .accordion-header:hover { background: rgba(255,255,255,0.03); }
+        .accordion-header i { transition: 0.3s; }
+        .accordion-item.open .accordion-header i { transform: rotate(180deg); }
+        .accordion-body { 
+            max-height: 0; 
+            overflow: hidden; 
+            transition: max-height 0.3s ease; 
+            color: var(--text-muted); 
+            font-size: 0.85rem;
+            padding: 0 4px;
+        }
+        .accordion-item.open .accordion-body { max-height: 200px; padding-top: 10px; }
+
+        /* FOOTER */
+        footer { background: var(--bg-topbar); padding: 40px 18px 20px; border-top: 1px solid var(--border-color); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.4fr; gap: 28px; margin-bottom: 28px; }
+        .footer-grid h5 { font-size: 0.95rem; margin-bottom: 14px; color: var(--text-light); font-weight: 700; }
+        .footer-grid p, .footer-grid li { color: var(--text-muted); font-size: 0.82rem; line-height: 1.7; }
+        .footer-grid ul { list-style: none; }
+        .footer-grid ul li a:hover { color: var(--orange); }
+        .footer-social a { 
+            display: inline-block; 
+            margin-right: 12px; 
+            font-size: 1.1rem; 
+            color: var(--text-muted);
+            padding: 8px;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+        .footer-social a:hover { color: var(--orange); background: rgba(255,255,255,0.05); }
+        .footer-bottom { 
+            padding-top: 16px; 
+            display: flex; 
+            justify-content: space-between; 
+            flex-wrap: wrap; 
+            gap: 10px; 
+            font-size: 0.75rem; 
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+        }
+        .designer-credit { text-align: center; font-size: 0.75rem; color: var(--text-muted); margin-top: 14px; padding-top: 10px; }
+        .designer-credit strong { color: var(--orange); font-weight: 600; }
+
+        @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
+
+        .whatsapp-float {
+            position: fixed; 
+            bottom: 20px; 
+            right: 20px;
+            background: #25d366; 
+            color: #fff; 
+            width: 56px; 
+            height: 56px;
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            font-size: 28px; 
+            box-shadow: 0 4px 14px rgba(0,0,0,0.4); 
+            z-index: 999;
+            transition: transform 0.2s;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* LIGHTBOX GALERIE */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 6000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            cursor: zoom-out;
+        }
+        .lightbox-modal.active {
+            display: flex;
+        }
+        .lightbox-modal .lightbox-content {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+            cursor: default;
+        }
+        .lightbox-modal .close-lightbox {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 2.8rem;
+            color: #fff;
+            cursor: pointer;
+            background: none;
+            border: none;
+            transition: transform 0.2s;
+            line-height: 1;
+            z-index: 10;
+            min-width: 48px;
+            min-height: 48px;
+        }
+        .lightbox-modal .close-lightbox:hover {
+            transform: scale(1.2);
+        }
+        .lightbox-modal .lightbox-caption {
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            font-size: 1rem;
+            background: rgba(0,0,0,0.5);
+            padding: 10px 20px;
+            max-width: 80%;
+            margin: 0 auto;
+            border-radius: 30px;
+            backdrop-filter: blur(4px);
+            pointer-events: none;
+        }
+        @media (max-width: 600px) {
+            .lightbox-modal .close-lightbox {
+                top: 12px;
+                right: 18px;
+                font-size: 2.2rem;
+            }
+            .lightbox-modal .lightbox-caption {
+                font-size: 0.8rem;
+                bottom: 16px;
+                padding: 6px 14px;
+            }
+        }
+
+        /* PRELOADER */
+        #preloader {
+            position: fixed;
+            inset: 0;
+            background: #1c1c1c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        #preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .loader-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .gear-wrapper {
+            width: 45px;
+            height: 90px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gear {
+            width: 90px;
+            height: 90px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: spin-gear 2s linear infinite;
+        }
+        .gear path {
+            fill: #e5e5e5;
+        }
+
+        .divider {
+            width: 2px;
+            height: 100px;
+            background: linear-gradient(
+                to bottom, 
+                rgba(255, 255, 255, 0) 0%, 
+                rgba(255, 255, 255, 0.9) 50%, 
+                rgba(255, 255, 255, 0) 100%
+            );
+        }
+
+        .loading-text {
+            color: #e5e5e5;
+            font-size: 26px;
+            font-weight: 300;
+            margin-left: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        @keyframes spin-gear {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        body.light-mode #preloader {
+            background: #f8fafc;
+        }
+        body.light-mode .gear path {
+            fill: #1c1c1c;
+        }
+        body.light-mode .divider {
+            background: linear-gradient(
+                to bottom, 
+                rgba(28, 28, 28, 0) 0%, 
+                rgba(28, 28, 28, 0.9) 50%, 
+                rgba(28, 28, 28, 0) 100%
+            );
+        }
+        body.light-mode .loading-text {
+            color: #1c1c1c;
+        }
+
+        /* SKIP LINK - Accessibilité */
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--orange);
+            color: #fff;
+            padding: 12px 24px;
+            z-index: 10000;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: top 0.3s;
+            font-size: 0.9rem;
+        }
+        .skip-link:focus {
+            top: 10px;
+        }
+
+        /* Main landmark */
+        main {
+            display: block;
+        }
+
+        /* Amélioration du contraste pour les liens */
+        a {
+            color: var(--text-light);
+        }
+        a:focus-visible {
+            outline: 2px solid var(--orange);
+            outline-offset: 2px;
+        }
+        button:focus-visible,
+        input:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible {
+            outline: 2px solid var(--orange);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- SKIP LINK - Accessibilité -->
+<a class="skip-link" href="#main-content">Passer au contenu principal</a>
+
+<!-- PRELOADER -->
+<div id="preloader" aria-hidden="true">
+    <div class="loader-container">
+        <div class="gear-wrapper">
+            <svg class="gear" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M94.5,43.2l-8.2-1.4c-0.7-2.8-1.8-5.5-3.2-8l5.2-6.6c1.2-1.5,1.1-3.6-0.3-5l-5.7-5.7c-1.4-1.4-3.5-1.5-5-0.3l-6.6,5.2 c-2.5-1.4-5.2-2.5-8-3.2L61.3,5.5C61,3.7,59.4,2.3,57.6,2.3h-8.1c-1.8,0-3.4,1.4-3.7,3.2l-1.4,8.2c-2.8,0.7-5.5,1.8-8,3.2 l-6.6-5.2c-1.5-1.2-3.6-1.1-5,0.3l-5.7,5.7c-1.4,1.4-1.5,3.5-0.3,5l5.2,6.6c-1.4,2.5-2.5,5.2-3.2,8L5.5,43.2 C3.7,43.5,2.3,45.1,2.3,46.9v8.1c0,1.8,1.4,3.4,3.2,3.7l8.2,1.4c0.7,2.8,1.8,5.5,3.2,8l-5.2,6.6c-1.2,1.5-1.1,3.6,0.3,5l5.7,5.7 c1.4,1.4,3.5,1.5,5,0.3l6.6-5.2c2.5,1.4,5.2,2.5,8,3.2l1.4,8.2c0.3,1.8,1.9,3.2,3.7,3.2h8.1c1.8,0,3.4-1.4,3.7-3.2l1.4-8.2 c2.8-0.7,5.5-1.8,8-3.2l6.6,5.2c1.5,1.2,3.6,1.1,5-0.3l5.7-5.7c1.4-1.4,1.5-3.5,0.3-5l-5.2-6.6c1.4-2.5,2.5-5.2,3.2-8l8.2-1.4 c1.8-0.3,3.2-1.9,3.2-3.7v-8.1C97.7,45.1,96.3,43.5,94.5,43.2z M50,65c-8.3,0-15-6.7-15-15s6.7-15,15-15s15,6.7,15,15 S58.3,65,50,65z"/>
+            </svg>
+        </div>
+        <div class="divider" aria-hidden="true"></div>
+        <div class="loading-text"> Chargement...</div>
+    </div>
+</div>
+
+<!-- TOP BAR -->
+<div class="topbar" role="navigation" aria-label="Barre sociale">
+    <div class="topbar-socials">
+        <a href="https://www.linkedin.com/in/jason-mukombela-0b9952296" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn - Profil professionnel">
+            <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <a href="https://wa.me/243971108969" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp - Contact direct">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:jasonmukombela@gmail.com" aria-label="Email - Envoyer un message">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook - Page officielle">
+            <i class="fab fa-facebook" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="topbar-tagline">
+        Portfolio Officiel · Jason Mukombela
+    </div>
+</div>
+
+<!-- HEADER -->
+<header role="banner">
+    <div class="logo" aria-label="Logo NTUMBA JASON">NTUMBA <span>JASON</span></div>
+    <div class="header-actions">
+        <nav class="desktop" aria-label="Navigation principale">
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#gallery">Galerie</a></li>
+                <li><a href="#portfolio">Portfolio 3D</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#resources">Ressources</a></li>
+                <li><a href="#testimonials">Avis</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact" class="btn-nav">Devis</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème (clair/sombre)">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+        </button>
+        <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+    </div>
+</header>
+
+<!-- DRAWER MOBILE -->
+<div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+<div class="drawer" id="drawer" role="navigation" aria-label="Navigation mobile">
+    <button class="close-btn" id="closeDrawer" aria-label="Fermer le menu">
+        <i class="fas fa-times" aria-hidden="true"></i>
+    </button>
+    <ul>
+        <li><a href="#home">Accueil</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#gallery">Galerie</a></li>
+        <li><a href="#portfolio">Portfolio 3D</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#resources">Ressources</a></li>
+        <li><a href="#testimonials">Avis</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact & Devis</a></li>
+    </ul>
+</div>
+
+<!-- MAIN CONTENT -->
+<main id="main-content">
+
+    <!-- HERO -->
+    <section id="home" aria-label="Section d'accueil">
+        <div class="overlay" aria-hidden="true"></div>
+        <div class="container">
+            <h1 class="hero-title">JASON<br>MUKOMBELA</h1>
+            <p class="hero-sub">Ingénieur Mécanicien · Expert Conception CAO 3D & Formateur à Kinshasa</p>
+            <div class="btn-group">
+                <a href="#services" class="btn btn-primary">Services CAO</a>
+                <a href="#contact" class="btn btn-orange">Demander un Devis</a>
+                <a href="#portfolio" class="btn">Parcourir les Projets</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATISTIQUES -->
+    <div class="stats-full-width" aria-label="Statistiques clés">
+        <div class="container">
+            <div class="stats-row">
+                <div class="stat-item">
+                    <div class="number" data-count="50">0</div>
+                    <span class="label">Projets CAO</span>
+                </div>
+                <div class="stat-item">
+                    <div class="number" data-count="100">0</div>
+                    <span class="label">Apprenants Formés</span>
+                </div>
+                <div class="stat-item">
+                    <div class="number" data-count="12">0</div>
+                    <span class="label">Partenaires</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- À PROPOS -->
+    <section id="about" aria-label="À propos de moi">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <p class="section-sub">Ingénieur Mécanicien, Concepteur CAO & Fondateur de Yekola Skills</p>
+            
+            <div class="about-wrap">
+                <div class="about-image-box">
+                    <img src="images/profile.jpg" alt="Jason NTUMBA MUKOMBELA - Ingénieur Mécanicien" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <h3>Bonjour, je suis Jason Mukombela</h3>
+                    <p>Passionné par l'ingénierie mécanique et l'innovation technologique à Kinshasa, j'accompagne les entreprises, ateliers de fabrication et étudiants dans la modélisation 3D avancée, le dimensionnement de structures et l'élaboration de dossiers d'exécution industriels sous <strong>BlueBrain Engineering</strong>.</p>
+                    <p>À travers mon initiative <strong>Yekola Skills</strong>, je transmets mon savoir-faire pratique sur SolidWorks et Autodesk Inventor pour former la prochaine génération d'ingénieurs et techniciens congolais.</p>
+                    
+                    <div class="about-skills">
+                        <div class="skill-item"><i class="fas fa-cogs" aria-hidden="true"></i> Modélisation Paramétrique 3D</div>
+                        <div class="skill-item"><i class="fas fa-chart-line" aria-hidden="true"></i> Analyse de Contraintes (FEA)</div>
+                        <div class="skill-item"><i class="fas fa-drafting-compass" aria-hidden="true"></i> Dessin Technique ISO (2D)</div>
+                        <div class="skill-item"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Formation & Encadrement PFE</div>
+                    </div>
+
+                    <a href="#contact" class="btn btn-orange" style="display:inline-flex;">Travailler ensemble</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIE -->
+    <section id="gallery" aria-label="Galerie de projets">
+        <div class="container">
+            <div class="gallery-header">
+                <div>
+                    <h2 class="section-title">Ma Galerie</h2>
+                    <p class="section-sub">Un aperçu visuel de mes réalisations en modélisation 3D et conception mécanique</p>
+                </div>
+                <div class="gallery-badge">
+                    <i class="fas fa-images" aria-hidden="true"></i>
+                    <span><strong>12</strong> projets présentés</span>
+                </div>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox('images/machine.jpg', 'Machine de production - Assemblage complet sous SolidWorks')" role="button" tabindex="0" aria-label="Agrandir l'image : Machine de production">
+                    <img src="images/machine.jpg" alt="Machine de production - Assemblage complet sous SolidWorks" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Rendu 3D</span>
+                        <h4>Machine de production</h4>
+                        <p>Assemblage complet sous SolidWorks</p>
+                        <div class="gallery-icon" aria-hidden="true"><i class="fas fa-expand"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('images/simulation.jpg', 'Analyse par éléments finis - Étude des contraintes mécaniques')" role="button" tabindex="0" aria-label="Agrandir l'image : Simulation FEA">
+                    <img src="images/simulation.jpg" alt="Analyse par éléments finis - Étude des contraintes mécaniques" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Simulation</span>
+                        <h4>Analyse par éléments finis</h4>
+                        <p>Étude des contraintes mécaniques</p>
+                        <div class="gallery-icon" aria-hidden="true"><i class="fas fa-expand"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('images/plan 2D.jpeg', 'Dossier de fabrication - Plans cotés aux normes ISO')" role="button" tabindex="0" aria-label="Agrandir l'image : Plan d'exécution">
+                    <img src="images/plan 2D.jpeg" alt="Dossier de fabrication - Plans cotés aux normes ISO" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Plan 2D</span>
+                        <h4>Dossier de fabrication</h4>
+                        <p>Plans cotés aux normes ISO</p>
+                        <div class="gallery-icon" aria-hidden="true"><i class="fas fa-expand"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('images/atelier.jpeg', 'Atelier SolidWorks - Session pratique à Kinshasa')" role="button" tabindex="0" aria-label="Agrandir l'image : Atelier SolidWorks">
+                    <img src="images/atelier.jpeg" alt="Atelier SolidWorks - Session pratique à Kinshasa" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Formation</span>
+                        <h4>Atelier SolidWorks</h4>
+                        <p>Session pratique à Kinshasa</p>
+                        <div class="gallery-icon" aria-hidden="true"><i class="fas fa-expand"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('images/encadrement.jpeg', 'Encadrement PFE - Accompagnement méthodologique')" role="button" tabindex="0" aria-label="Agrandir l'image : Encadrement PFE">
+                    <img src="images/encadrement.jpeg" alt="Encadrement PFE - Accompagnement méthodologique" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Encadrement</span>
+                        <h4>Extra math GROUPE</h4>
+                        <p>Accompagnement méthodologique</p>
+                        <div class="gallery-icon" aria-hidden="true"><i class="fas fa-expand"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('images/terrain.JPG', 'Stage - Machines complexes, sens de détail et précision optimale')" role="button" tabindex="0" aria-label="Agrandir l'image : Stage">
+                    <img src="images/terrain.JPG" alt="Stage - Machines complexes, sens de détail et précision optimale" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Stage</span>
+                        <h4>Machines complexes</h4>
+                        <p>Sens de détail et précision optimale</p>
+                        <div class="gallery-icon" aria-hidden="true"><i class="fas fa-expand"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('images/cinematique.jpeg', 'Cinématique de mécanisme - Simulation de mouvement')" role="button" tabindex="0" aria-label="Agrandir l'image : Animation CAO">
+                    <img src="images/cinematique.jpeg" alt="Cinématique de mécanisme - Simulation de mouvement" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Animation</span>
+                        <h4>Cinématique de mécanisme</h4>
+                        <p>Simulation de mouvement</p>
+                        <div class="gallery-icon" aria-hidden="true"><i class="fas fa-expand"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('images/assemblage.jpeg', 'Charpente métallique - Dimensionnement et assemblage')" role="button" tabindex="0" aria-label="Agrandir l'image : Structure métallique">
+                    <img src="images/assemblage.jpeg" alt="Charpente métallique - Dimensionnement et assemblage" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Structure</span>
+                        <h4>Charpente métallique</h4>
+                        <p>Dimensionnement et assemblage</p>
+                        <div class="gallery-icon" aria-hidden="true"><i class="fas fa-expand"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-footer">
+                <button class="btn-gallery" onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'})" aria-label="Voir tous les projets du portfolio">
+                    Voir tous les projets <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()" role="dialog" aria-modal="true" aria-label="Agrandissement d'image">
+        <button class="close-lightbox" onclick="closeLightbox()" aria-label="Fermer l'agrandissement">&times;</button>
+        <img class="lightbox-content" id="lightboxImg" src="" alt="Agrandissement">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" aria-label="Portfolio 3D">
+        <div class="container">
+            <h2 class="section-title">Portfolio 3D</h2>
+            <p class="section-sub">Galerie de modélisations, animations et plans d'exécution récents</p>
+            
+            <div class="filters" role="tablist" aria-label="Filtres du portfolio">
+                <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Tous les projets</button>
+                <button class="filter-btn" data-filter="rendu" role="tab" aria-selected="false">Rendus 3D HD</button>
+                <button class="filter-btn" data-filter="animation" role="tab" aria-selected="false">Animations CAO</button>
+                <button class="filter-btn" data-filter="plan" role="tab" aria-selected="false">Plans d'exécution 2D</button>
+            </div>
+
+            <div class="portfolio-grid-wrapper">
+                <div class="card-grid" id="portfolioGrid" role="list">
+                    <!-- Les cartes sont générées par JavaScript -->
+                </div>
+
+                <div class="pagination-wrapper" id="portfolioPagination" role="navigation" aria-label="Pagination du portfolio">
+                    <button class="page-btn" id="portfolioPrev" disabled aria-label="Page précédente">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <span class="pagination-info" id="portfolioPageInfo">Page 1 / 1</span>
+                    <button class="page-btn" id="portfolioNext" disabled aria-label="Page suivante">
+                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODALE PROJET -->
+    <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-label="Détails du projet">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()" aria-label="Fermer la modale">&times;</button>
+            <h3 id="modalTitle" style="font-size:1.8rem; font-weight:700; margin-bottom: 4px;">Titre du projet</h3>
+            
+            <div class="modal-img-container">
+                <img id="modalImg" src="" alt="Détail du projet">
+            </div>
+
+            <div class="modal-specs-grid">
+                <div class="spec-item">Logiciel utilisé : <strong id="modalSoftware">-</strong></div>
+                <div class="spec-item">Type de projet : <strong id="modalCategory">-</strong></div>
+                <div class="spec-item">Durée d'exécution : <strong id="modalDuration">-</strong></div>
+                <div class="spec-item">Statut : <strong id="modalStatus">-</strong></div>
+            </div>
+
+            <p id="modalDesc" style="color:var(--text-muted); font-size:0.95rem; line-height:1.7; margin-top:10px;">Description détaillée du projet...</p>
+
+            <div class="modal-actions">
+                <a id="modalQuoteBtn" href="#contact" onclick="closeModal()" class="btn btn-orange" style="font-size:0.85rem; flex:1;">
+                    <i class="fas fa-paper-plane" aria-hidden="true"></i> Demander un projet similaire
+                </a>
+                <button onclick="alert('La fiche technique complète en PDF sera disponible en téléchargement sous peu.')" class="btn btn-primary" style="font-size:0.85rem; flex:1;">
+                    <i class="fas fa-file-pdf" aria-hidden="true"></i> Fiche PDF
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="services" aria-label="Services et formations">
+        <div class="container">
+            <h2 class="section-title">Services & Formations</h2>
+            <p class="section-sub">Des solutions d'ingénierie rigoureuses et des formations orientées pratique</p>
+            
+            <div class="services-grid-wrapper">
+                <div class="card-grid" id="servicesGrid" role="list">
+                    <!-- Les cartes sont générées par JavaScript -->
+                </div>
+
+                <div class="pagination-wrapper" id="servicesPagination" role="navigation" aria-label="Pagination des services">
+                    <button class="page-btn" id="servicesPrev" disabled aria-label="Page précédente">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <span class="pagination-info" id="servicesPageInfo">Page 1 / 1</span>
+                    <button class="page-btn" id="servicesNext" disabled aria-label="Page suivante">
+                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESSOURCES -->
+    <section id="resources" aria-label="Ressources et documents">
+        <div class="container">
+            <h2 class="section-title">Ressources & Documents</h2>
+            <p class="section-sub">Téléchargez ou consultez mes documents officiels</p>
+
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                    </div>
+                    <h3>Curriculum Vitae</h3>
+                    <p>Mon parcours professionnel, mes compétences en ingénierie mécanique et mes expériences en conception CAO.</p>
+                    <div class="resource-actions">
+                        <button class="btn btn-preview" onclick="openPdfModal('Cv_Matadi_Gateway.pdf', 'CV - Jason Mukombela')" aria-label="Afficher le CV en PDF">
+                            <i class="fas fa-eye" aria-hidden="true"></i> Afficher
+                        </button>
+                        <a href="Cv_Matadi_Gateway.pdf" download class="btn btn-download" aria-label="Télécharger le CV">
+                            <i class="fas fa-download" aria-hidden="true"></i> Télécharger
+                        </a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-certificate" aria-hidden="true"></i>
+                    </div>
+                    <h3>Certificat IYMC</h3>
+                    <p>Certificat International de Mathématiques et de Calcul (IYMC) - reconnaissance de mes compétences analytiques.</p>
+                    <div class="resource-actions">
+                        <button class="btn btn-preview" onclick="openPdfModal('Certificate-IYMC.pdf', 'Certificat IYMC')" aria-label="Afficher le certificat IYMC en PDF">
+                            <i class="fas fa-eye" aria-hidden="true"></i> Afficher
+                        </button>
+                        <a href="Certificate-IYMC.pdf" download class="btn btn-download" aria-label="Télécharger le certificat IYMC">
+                            <i class="fas fa-download" aria-hidden="true"></i> Télécharger
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODALE PDF -->
+    <div class="pdf-modal" id="pdfModal" role="dialog" aria-modal="true" aria-label="Visualiseur PDF">
+        <div class="pdf-modal-content">
+            <div class="pdf-modal-header">
+                <h3 id="pdfModalTitle">Document</h3>
+                <button class="close-pdf" onclick="closePdfModal()" aria-label="Fermer le visualiseur PDF">&times;</button>
+            </div>
+            <div class="pdf-modal-body">
+                <iframe id="pdfIframe" src="" title="Visualiseur PDF"></iframe>
+                <div class="pdf-fallback" id="pdfFallback">
+                    <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                    <p>Le visualiseur PDF n'est pas disponible sur ce navigateur.</p>
+                    <a id="pdfFallbackLink" href="#" download class="btn btn-download">
+                        <i class="fas fa-download" aria-hidden="true"></i> Télécharger le fichier
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TÉMOIGNAGES -->
+    <section id="testimonials" aria-label="Témoignages">
+        <div class="container">
+            <h2 class="section-title">Témoignages & Retours</h2>
+            <p class="section-sub">Ce que disent les industriels et les apprenants de Yekola Skills</p>
+            
+            <div class="testimonial-carousel-wrapper">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <div>
+                            <div class="testimonial-stars" aria-hidden="true">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"La qualité des rendus 3D et la précision des plans 2D fournis par Jason ont facilité la fabrication de nos équipements sans aucune erreur d'usinage."</p>
+                        </div>
+                        <div class="testimonial-user" style="margin-top:16px;">
+                            <img src="images/temoignage.jpg" alt="Marc Kabangu - Directeur Technique" loading="lazy">
+                            <div class="testimonial-info">
+                                <h5>Marc Kabangu</h5>
+                                <span>Directeur Technique PME</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div>
+                            <div class="testimonial-stars" aria-hidden="true">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"La formation SolidWorks avec Jason est très directe et orientée pratique. J'ai pu réaliser la modélisation complète de mon projet de fin d'études."</p>
+                        </div>
+                        <div class="testimonial-user" style="margin-top:16px;">
+                            <img src="images/temoignage.jpg" alt="Patrick Tshilombo - Étudiant" loading="lazy">
+                            <div class="testimonial-info">
+                                <h5>Patrick Tshilombo</h5>
+                                <span>Étudiant UNIKIN</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div>
+                            <div class="testimonial-stars" aria-hidden="true">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Un professionnalisme remarquable. Les calculs d'efforts et la modélisation sous Inventor étaient très rigoureux. Je recommande vivement !"</p>
+                        </div>
+                        <div class="testimonial-user" style="margin-top:16px;">
+                            <img src="images/temoignage.jpg" alt="Sarah Muleba - Ingénieure" loading="lazy">
+                            <div class="testimonial-info">
+                                <h5>Sarah Muleba</h5>
+                                <span>Ingénieure Structure</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div>
+                            <div class="testimonial-stars" aria-hidden="true">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Encadrement au top pour mon PFE en ingénierie mécanique. Conseils précis et maîtrise parfaite de la modélisation 3D."</p>
+                        </div>
+                        <div class="testimonial-user" style="margin-top:16px;">
+                            <img src="images/temoignage.jpg" alt="Alain Lukusa - Diplômé" loading="lazy">
+                            <div class="testimonial-info">
+                                <h5>Alain Lukusa</h5>
+                                <span>Diplômé Génie Mécanique</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <button class="carousel-btn" id="prevBtn" aria-label="Témoignage précédent">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <button class="carousel-btn" id="nextBtn" aria-label="Témoignage suivant">
+                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" aria-label="Foire aux questions">
+        <div class="container">
+            <h2 class="section-title">Foire Aux Questions</h2>
+            <div class="accordion" style="margin-top: 16px;">
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)" role="button" tabindex="0" aria-expanded="false">
+                        <span>Quel est le délai moyen pour une étude de conception CAO ?</span>
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="accordion-body">Le délai dépend de la complexité du système mécanique. En général, les études de pièces isolées prennent 3 à 5 jours, tandis que les assemblages complexes nécessitent 7 à 15 jours ouvrés.</div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)" role="button" tabindex="0" aria-expanded="false">
+                        <span>Comment s'inscrire aux formations Yekola Skills ?</span> 
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="accordion-body">Vous pouvez vous inscrire en remplissant le formulaire de contact du site ou directement par message WhatsApp. Les sessions se déroulent au Campus UNIKIN.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-label="Contact et devis">
+        <div class="container">
+            <h2 class="section-title">Contact & Demande de Devis</h2>
+            <p class="section-sub">Discutons de vos projets techniques ou de votre inscription aux formations</p>
+            
+            <div class="contact-wrap">
+                <div>
+                    <div class="contact-info-card">
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                            <div>
+                                <h6>Téléphone / WhatsApp</h6>
+                                <p>+243 971108969 / +243 828121183</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <div>
+                                <h6>Adresse Email</h6>
+                                <p>jasonmukombela@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item" style="margin-bottom:0;">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <div>
+                                <h6>Localisation</h6>
+                                <p>Campus UNIKIN, Kinshasa-Lemba (RDC)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="contactForm" aria-label="Formulaire de contact" novalidate>
+                        <div class="form-group">
+                            <label for="nom">Nom complet</label>
+                            <input type="text" id="nom" placeholder="Votre nom complet" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Adresse email</label>
+                            <input type="email" id="email" placeholder="Votre adresse email" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Numéro de téléphone</label>
+                            <input type="tel" id="phone" placeholder="Numéro de téléphone">
+                        </div>
+                        <div class="form-group">
+                            <label for="sujet">Sujet</label>
+                            <select id="sujet">
+                                <option value="devis">Demande de devis CAO (BlueBrain Engineering)</option>
+                                <option value="formation">Inscription Formation (Yekola Skills)</option>
+                                <option value="autre">Autre demande</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea rows="4" id="message" placeholder="Détails de votre projet ou question..." required aria-required="true"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-orange" style="border:none; padding:12px; width:100%; min-height:48px;">Envoyer le message</button>
+                    </form>
+                    <div id="formFeedback" style="margin-top:8px; font-size:0.85rem; color:var(--orange);" role="status"></div>
+                </div>
+
+                <div>
+                    <div class="map-container" aria-label="Carte de localisation">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.084!2d15.286!3d-4.381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a318f8a9a3b9d%3A0x5a7c4b9f8e3c2a1!2sUniversit%C3%A9%20de%20Kinshasa!5e0!3m2!1sfr!2scd!4v1690000000000" allowfullscreen loading="lazy" title="Carte de localisation - Campus UNIKIN"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h5>Jason Mukombela</h5>
+                <p>Ingénieur mécanicien spécialisé en modélisation 3D CAO, calcul de structures et formateur de compétences techniques.</p>
+                <div class="footer-social" style="margin-top: 14px;">
+                    <a href="https://www.linkedin.com/in/jason-mukombela-0b9952296" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://wa.me/243971108969" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                    </a>
+                    <a href="mailto:jasonmukombela@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h5>Navigation</h5>
+                <ul>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#gallery">Galerie</a></li>
+                    <li><a href="#portfolio">Portfolio 3D</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#resources">Ressources</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Services</h5>
+                <ul>
+                    <li><a href="#services">Conception CAO 3D</a></li>
+                    <li><a href="#services">SolidWorks & Inventor</a></li>
+                    <li><a href="#services">Plans d'exécution 2D</a></li>
+                    <li><a href="#services">Encadrement PFE</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Contact Direct</h5>
+                <ul>
+                    <li><i class="fas fa-phone-alt" aria-hidden="true"></i> +243 971108969</li>
+                    <li><i class="fas fa-envelope" aria-hidden="true"></i> jasonmukombela@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Campus UNIKIN, Lemba</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <span>&copy; 2026 NTUMBA MUKOMBELA Jason. Tous droits réservés.</span>
+            <span>BlueBrain Engineering & Yekola Skills</span>
+        </div>
+        
+        <div class="designer-credit">
+            Conçu par <strong>Divin Ntwali</strong>
+        </div>
+    </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/243971108969?text=Bonjour%20Jason,%20je%20souhaite%20en%20savoir%20plus." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contacter via WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+</a>
+
+<!-- JAVASCRIPT -->
+<script>
+    // ============================================================
+    // PRELOADER - Disparition après 3 secondes
+    // ============================================================
+    setTimeout(function() {
+        const preloader = document.getElementById('preloader');
+        preloader.classList.add('hidden');
+        document.body.style.overflow = '';
+    }, 3000);
+
+    // ============================================================
+    // LIGHTBOX POUR LA GALERIE
+    // ============================================================
+    function openLightbox(imgSrc, caption) {
+        const modal = document.getElementById('lightboxModal');
+        const img = document.getElementById('lightboxImg');
+        const cap = document.getElementById('lightboxCaption');
+        img.src = imgSrc;
+        cap.textContent = caption || '';
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        modal.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeLightbox() {
+        const modal = document.getElementById('lightboxModal');
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        modal.setAttribute('aria-hidden', 'true');
+    }
+
+    // Fermeture avec la touche Échap
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            if (document.getElementById('lightboxModal').classList.contains('active')) {
+                closeLightbox();
+            }
+            if (document.getElementById('projectModal').classList.contains('active')) {
+                closeModal();
+            }
+            if (document.getElementById('pdfModal').classList.contains('active')) {
+                closePdfModal();
+            }
+        }
+    });
+
+    // Navigation clavier pour la galerie (Entrée/Espace)
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                item.click();
+            }
+        });
+    });
+
+    // ============================================================
+    // DONNÉES DES PROJETS
+    // ============================================================
+    const projects = [
+        {
+            title: 'BioGaz Gén - Méthaniseur',
+            category: 'rendu',
+            img: 'images/bio gaz.jpeg',
+            desc: 'Conception complète d\'un méthaniseur pour la production de biogaz. Le projet inclut l\'assemblage paramétrique des cuves, le système de chauffage, l\'agitateur, le contrôle des interférences et un rendu photoréaliste pour la présentation au client.',
+            software: 'SolidWorks 2024',
+            type: 'Rendu 3D HD & Assemblage',
+            duration: '12 Jours',
+            status: 'Livré / Opérationnel'
+        },
+        {
+            title: 'Extracteur d\'huile de courge',
+            category: 'rendu',
+            img: 'https://static.shuliy.com/wp-content/uploads/2021/04/diesel-engine-type-melon-seed-extractor.webp',
+            desc: 'Conception d\'une presse à vis sans fin pour l\'extraction d\'huile de graines de courge. Le modèle intègre un système de chauffe, un filtre à huile et un contrôleur de température.',
+            software: 'SolidWorks 2024',
+            type: 'Rendu 3D HD & Assemblage',
+            duration: '8 Jours',
+            status: 'Validé / Prototype en cours'
+        },
+        {
+            title: 'Drône design - UAV',
+            category: 'rendu',
+            img: 'https://media.istockphoto.com/id/1295399737/vector/drone-silhouette-vector-design.jpg?s=612x612&w=0&k=20&c=r8a2W4GzdIzPNESsMiLPZskv3jeYkr0P5IBOt6Xci1E=',
+            desc: 'Conception complète d\'un drone à voilure fixe pour la cartographie et la surveillance. Le projet inclut le design du fuselage, des ailes, le système de propulsion et l\'analyse aérodynamique.',
+            software: 'SolidWorks 2024',
+            type: 'Rendu 3D HD & Assemblage',
+            duration: '10 Jours',
+            status: 'En développement'
+        },
+        {
+            title: 'Fumoir électrique',
+            category: 'rendu',
+            img: 'https://barbecue-co.com/61284-home_default/fumoir-elect-barbecook-otto-v2-inox.webp',
+            desc: 'Conception d\'un fumoir électrique professionnel avec contrôle précis de la température et du flux de fumée. Le projet inclut les plans de fabrication et la nomenclature complète.',
+            software: 'SolidWorks 2024',
+            type: 'Rendu 3D HD & Assemblage',
+            duration: '6 Jours',
+            status: 'Livré'
+        },
+        {
+            title: 'GPM-SI - Groupe motopropulseur',
+            category: 'rendu',
+            img: 'https://gpmco.com/wp-content/uploads/2024/01/pinto-34-render-v2-1-cropped-1024x485.jpg',
+            desc: 'Conception d\'un groupe motopropulseur industriel pour une application de pompage. Le projet comprend la modélisation du moteur, de la pompe, du système de transmission et le dimensionnement des supports.',
+            software: 'SolidWorks 2024',
+            type: 'Rendu 3D HD & Assemblage',
+            duration: '15 Jours',
+            status: 'Livré'
+        },
+        {
+            title: 'HydroSweep - Système de nettoyage',
+            category: 'rendu',
+            img: 'https://www.swellwake.com/cdn/shop/products/HydroSweep-Pro-Safe-Shore-1657823402.jpg?v=1657823404&width=3000',
+            desc: 'Conception d\'un système de nettoyage haute pression pour le nettoyage des coques de bateaux. Le système utilise une pompe à piston, des buses rotatives et un système de filtration.',
+            software: 'SolidWorks 2024',
+            type: 'Rendu 3D HD & Assemblage',
+            duration: '9 Jours',
+            status: 'En cours'
+        },
+        {
+            title: 'IngénieuxSud - Projets humanitaires',
+            category: 'animation',
+            img: 'images/profile.jpg',
+            desc: 'Étude cinématique et calcul par éléments finis (FEA) pour optimiser les structures des projets humanitaires.',
+            software: 'Autodesk Inventor',
+            type: 'Animation Cinématique & FEA',
+            duration: '5 Jours',
+            status: 'Validation technique'
+        },
+        {
+            title: 'Injector - Système d\'injection',
+            category: 'animation',
+            img: 'https://www.shutterstock.com/image-photo/image-diesel-fuel-injector-isolated-260nw-1015553329.jpg',
+            desc: 'Conception d\'un injecteur de carburant haute performance. Le projet inclut la modélisation 3D, l\'analyse de l\'écoulement du fluide et la simulation du mouvement des composants internes.',
+            software: 'Autodesk Inventor',
+            type: 'Animation Cinématique & FEA',
+            duration: '7 Jours',
+            status: 'Validé'
+        },
+        {
+            title: 'SOLIDWORKS Visualize Content',
+            category: 'animation',
+            img: 'https://hawkridgesys.com/wp-content/uploads/solidworks-visualiz-bench-vise-render-3d-perspective-tile.jpg',
+            desc: 'Création de rendus photoréalistes et d\'animations pour la présentation de produits.',
+            software: 'SOLIDWORKS Visualize',
+            type: 'Rendu Photoréaliste',
+            duration: '3 Jours',
+            status: 'Livré'
+        },
+        {
+            title: 'Couveuse néonatale',
+            category: 'plan',
+            img: 'https://us.123rf.com/450wm/seregalsv/seregalsv1904/seregalsv190400181/122886212-le-b%C3%A9b%C3%A9-se-trouve-sous-une-lampe-ultraviolette-avec-la-jaunisse.jpg?ver=6',
+            desc: 'Élaboration du dossier technique d\'usinage et d\'assemblage comprenant les vues en coupe, les tolérances ISO H7/g6, la nomenclature complète et les détails des soudures.',
+            software: 'AutoCAD / SolidWorks',
+            type: 'Plans d\'Exécution Normés',
+            duration: '4 Jours',
+            status: 'Dossier Prêt pour Usinage'
+        }
+    ];
+
+    // ============================================================
+    // DONNÉES DES SERVICES
+    // ============================================================
+    const servicesData = [
+        {
+            title: 'Rétro-ingénierie & Numérisation 3D',
+            img: 'https://formlabs.com/_next/image/?url=https://formlabs-media.formlabs.com/filer_public_thumbnails/filer_public/6d/1d/6d1d054f-86b6-4324-bd5b-4d8bd6c7dccc/image8.jpg__1354x0_q85_subsampling-2.jpg&w=3840&q=75',
+            desc: 'Prestation de numérisation, conversion et reconstruction de pièces physiques en modèles CAO 3D exploitables.',
+            features: ['Numérisation 3D de pièces complexes', 'Reconstruction CAO à partir de scans', 'Modifications et optimisations'],
+            btnText: 'Demander un devis',
+            btnClass: 'btn-primary'
+        },
+        {
+            title: 'Conception CAO 3D (SolidWorks / Inventor)',
+            img: 'https://www.primante3d.com/wp-content/uploads/2023/10/logiciel-autodesk-inventor.jpg',
+            desc: 'Service de développement, modélisation paramétrique 3D et assemblage de produits, machines et systèmes mécaniques sur mesure.',
+            features: ['Modélisation paramétrique 3D', 'Assemblages complexes et sous-systèmes', 'Rendu photoréaliste et présentation'],
+            btnText: 'Demander un devis',
+            btnClass: 'btn-orange'
+        },
+        {
+            title: 'Calcul de structures & Simulation FEA',
+            img: 'https://s3-eu-west-1.amazonaws.com/fetchcfd/resized/descriptionImage-1484859910016.jpg',
+            desc: 'Prestation d\'ingénierie numérique et d\'analyse par éléments finis pour valider la résistance mécanique.',
+            features: ['Analyse de contraintes et déformations', 'Optimisation matière / masse', 'Validation de la sécurité des structures'],
+            btnText: 'Demander un devis',
+            btnClass: 'btn-primary'
+        },
+        {
+            title: 'Plans d\'exécution 2D normalisés',
+            img: 'https://www.batiscript.com/wp-content/uploads/2025/03/Coupe-2D-ou-3D-dun-plan-EXE.png',
+            desc: 'Service de dessin technique et de mise en plan (cotation fonctionnelle, tolérances, nomenclatures ISO/ANSI) prêts pour la fabrication.',
+            features: ['Plans de fabrication prêts à l\'usinage', 'Cotations fonctionnelles et tolérances', 'Nomenclatures ISO/ANSI complètes'],
+            btnText: 'Demander un devis',
+            btnClass: 'btn-orange'
+        },
+        {
+            title: 'Formations SolidWorks / Inventor (Yekola Skills)',
+            img: 'https://images.squarespace-cdn.com/content/61deae4cf38bad1083bfed91/a84a07a4-b9ea-4239-b48c-2339ff92a813/3D-CAD-Modeling-SolidWorks-High-Performance-Engine-Part-Fuel-Pump-Mount-0.jpg?content-type=image/jpeg',
+            desc: 'Offre de formation professionnelle, encadrement pratique et renforcement de capacités en modélisation CAO et ingénierie numérique.',
+            features: ['Niveaux débutant à avancé', 'Ateliers 100% pratiques', 'Préparation aux certifications CSWA / CSWP'],
+            btnText: 'S\'inscrire à une session',
+            btnClass: 'btn-primary'
+        },
+        {
+            title: 'Encadrement PFE & Projets académiques',
+            img: 'images/hero gb.jpeg',
+            desc: 'Service d\'accompagnement, d\'orientation technique et d\'assistance à la réalisation de projets d\'ingénierie et de mémoires académiques.',
+            features: ['Structuration du mémoire et du dossier technique', 'Assistance modélisation et calculs', 'Coaching présentation et défense'],
+            btnText: 'Demander un accompagnement',
+            btnClass: 'btn-orange'
+        }
+    ];
+
+    // ============================================================
+    // PAGINATION - FONCTION GÉNÉRIQUE
+    // ============================================================
+    function createPagination(items, containerId, itemsPerPage, renderFn, paginationId, prevId, nextId, infoId) {
+        let currentPage = 1;
+        const totalPages = Math.ceil(items.length / itemsPerPage);
+
+        function renderPage(page) {
+            const start = (page - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const pageItems = items.slice(start, end);
+            
+            const container = document.getElementById(containerId);
+            container.innerHTML = pageItems.map(item => renderFn(item)).join('');
+
+            const info = document.getElementById(infoId);
+            if (info) {
+                info.textContent = totalPages > 0 ? `Page ${page} / ${totalPages}` : 'Page 1 / 1';
+            }
+            
+            const prevBtn = document.getElementById(prevId);
+            const nextBtn = document.getElementById(nextId);
+            if (prevBtn) prevBtn.disabled = page <= 1;
+            if (nextBtn) nextBtn.disabled = page >= totalPages || totalPages === 0;
+
+            document.querySelectorAll(`#${paginationId} .page-btn:not(#${prevId}):not(#${nextId})`).forEach(btn => {
+                btn.classList.remove('active');
+                if (parseInt(btn.dataset.page) === page) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
+        function initPagination() {
+            const paginationWrapper = document.getElementById(paginationId);
+            if (!paginationWrapper) return;
+            
+            const existingButtons = paginationWrapper.querySelectorAll(`.page-btn:not(#${prevId}):not(#${nextId})`);
+            existingButtons.forEach(btn => btn.remove());
+
+            for (let i = 1; i <= totalPages; i++) {
+                const btn = document.createElement('button');
+                btn.className = 'page-btn';
+                btn.dataset.page = i;
+                btn.textContent = i;
+                btn.setAttribute('aria-label', `Page ${i}`);
+                btn.addEventListener('click', () => {
+                    currentPage = i;
+                    renderPage(currentPage);
+                });
+                const nextBtn = document.getElementById(nextId);
+                if (nextBtn) {
+                    paginationWrapper.insertBefore(btn, nextBtn);
+                } else {
+                    paginationWrapper.appendChild(btn);
+                }
+            }
+
+            const prevBtn = document.getElementById(prevId);
+            const nextBtn = document.getElementById(nextId);
+            
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        renderPage(currentPage);
+                    }
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                        renderPage(currentPage);
+                    }
+                });
+            }
+
+            renderPage(1);
+        }
+
+        return { init: initPagination, currentPage, totalPages };
+    }
+
+    // ============================================================
+    // RENDU DES CARTES PROJET
+    // ============================================================
+    function renderProjectCard(project) {
+        return `
+            <div class="portfolio-card" data-category="${project.category}" role="listitem">
+                <div class="portfolio-img-wrap">
+                    <img src="${project.img}" alt="${project.title}" loading="lazy">
+                </div>
+                <div class="portfolio-body">
+                    <h4 class="portfolio-title">${project.title}</h4>
+                    <p class="portfolio-desc">${project.desc.substring(0, 80)}${project.desc.length > 80 ? '...' : ''}</p>
+                    <button class="btn btn-primary" style="padding: 8px 14px; font-size:0.78rem; min-height:40px;" 
+                        onclick="openModal(
+                            '${project.title.replace(/'/g, "\\'")}', 
+                            '${project.software}', 
+                            '${project.type}', 
+                            '${project.duration}', 
+                            '${project.status}', 
+                            '${project.desc.replace(/'/g, "\\'")}', 
+                            '${project.img}'
+                        )" aria-label="Voir les détails du projet ${project.title}">Détails du projet</button>
+                </div>
+            </div>
+        `;
+    }
+
+    // ============================================================
+    // RENDU DES CARTES SERVICE
+    // ============================================================
+    function renderServiceCard(service) {
+        const features = service.features.map(f => `<li><i class="fas fa-check" aria-hidden="true"></i> ${f}</li>`).join('');
+        return `
+            <div class="service-card" role="listitem">
+                <img src="${service.img}" alt="${service.title}" class="service-img" loading="lazy">
+                <div class="service-body">
+                    <h3 class="service-title">${service.title}</h3>
+                    <p class="service-desc">${service.desc}</p>
+                    <ul class="service-features">${features}</ul>
+                    <a href="#contact" class="btn ${service.btnClass}" style="text-align:center; min-height:44px;">${service.btnText}</a>
+                </div>
+            </div>
+        `;
+    }
+
+    // ============================================================
+    // INITIALISATION DES PAGINATIONS
+    // ============================================================
+    const portfolioPagination = createPagination(
+        projects, 
+        'portfolioGrid', 
+        3, 
+        renderProjectCard,
+        'portfolioPagination',
+        'portfolioPrev',
+        'portfolioNext',
+        'portfolioPageInfo'
+    );
+    portfolioPagination.init();
+
+    const servicesPagination = createPagination(
+        servicesData,
+        'servicesGrid',
+        3,
+        renderServiceCard,
+        'servicesPagination',
+        'servicesPrev',
+        'servicesNext',
+        'servicesPageInfo'
+    );
+    servicesPagination.init();
+
+    // ============================================================
+    // FILTRES PORTFOLIO
+    // ============================================================
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterBtns.forEach(b => {
+                b.classList.remove('active');
+                b.setAttribute('aria-selected', 'false');
+            });
+            this.classList.add('active');
+            this.setAttribute('aria-selected', 'true');
+            const filter = this.dataset.filter;
+            
+            const filtered = filter === 'all' 
+                ? projects 
+                : projects.filter(p => p.category === filter);
+            
+            const newPagination = createPagination(
+                filtered,
+                'portfolioGrid',
+                3,
+                renderProjectCard,
+                'portfolioPagination',
+                'portfolioPrev',
+                'portfolioNext',
+                'portfolioPageInfo'
+            );
+            newPagination.init();
+        });
+    });
+
+    // ============================================================
+    // MODALE PROJET
+    // ============================================================
+    function openModal(title, software, category, duration, status, desc, imgSrc) {
+        document.getElementById('modalTitle').textContent = title;
+        document.getElementById('modalSoftware').textContent = software;
+        document.getElementById('modalCategory').textContent = category;
+        document.getElementById('modalDuration').textContent = duration;
+        document.getElementById('modalStatus').textContent = status;
+        document.getElementById('modalDesc').textContent = desc;
+        document.getElementById('modalImg').src = imgSrc;
+        document.getElementById('modalImg').alt = title;
+        document.getElementById('projectModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        document.getElementById('projectModal').classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    document.getElementById('projectModal').addEventListener('click', (e) => {
+        if (e.target === e.currentTarget || e.target.classList.contains('close-modal')) {
+            closeModal();
+        }
+    });
+
+    // ============================================================
+    // MODALE PDF
+    // ============================================================
+    function openPdfModal(pdfPath, title) {
+        const modal = document.getElementById('pdfModal');
+        const iframe = document.getElementById('pdfIframe');
+        const fallback = document.getElementById('pdfFallback');
+        const fallbackLink = document.getElementById('pdfFallbackLink');
+        const modalTitle = document.getElementById('pdfModalTitle');
+
+        modalTitle.textContent = title || 'Document PDF';
+        iframe.src = pdfPath;
+        iframe.style.display = 'block';
+        fallback.style.display = 'none';
+
+        iframe.onerror = function() {
+            iframe.style.display = 'none';
+            fallback.style.display = 'flex';
+            fallbackLink.href = pdfPath;
+        };
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closePdfModal() {
+        const modal = document.getElementById('pdfModal');
+        const iframe = document.getElementById('pdfIframe');
+        modal.classList.remove('active');
+        iframe.src = '';
+        document.body.style.overflow = '';
+    }
+
+    document.getElementById('pdfModal').addEventListener('click', (e) => {
+        if (e.target === e.currentTarget) closePdfModal();
+    });
+
+    // ============================================================
+    // AUTRES FONCTIONNALITÉS
+    // ============================================================
+    
+    // MODE CLAIR / SOMBRE
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = themeToggle.querySelector('i');
+    
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+        if(document.body.classList.contains('light-mode')) {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        } else {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        }
+    });
+
+    // DRAWER MOBILE
+    const burger = document.getElementById('burgerBtn');
+    const drawer = document.getElementById('drawer');
+    const overlay = document.getElementById('drawerOverlay');
+
+    function toggleDrawer(open) {
+        drawer.classList.toggle('open', open);
+        overlay.classList.toggle('active', open);
+        burger.setAttribute('aria-expanded', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+    }
+    burger.addEventListener('click', () => toggleDrawer(true));
+    document.getElementById('closeDrawer').addEventListener('click', () => toggleDrawer(false));
+    overlay.addEventListener('click', () => toggleDrawer(false));
+
+    // Fermeture du drawer avec la touche Échap
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && drawer.classList.contains('open')) {
+            toggleDrawer(false);
+        }
+    });
+
+    // COMPTEURS STATISTIQUES
+    const counters = document.querySelectorAll('.number');
+    const statObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const target = parseInt(el.dataset.count);
+                let current = 0;
+                const step = Math.ceil(target / 30);
+                const interval = setInterval(() => {
+                    current += step;
+                    if (current >= target) { 
+                        el.textContent = target; 
+                        clearInterval(interval); 
+                    } else {
+                        el.textContent = current;
+                    }
+                }, 35);
+                statObserver.unobserve(el);
+            }
+        });
+    }, { threshold: 0.3 });
+    counters.forEach(c => statObserver.observe(c));
+
+    // CARROUSEL TÉMOIGNAGES
+    const track = document.getElementById('testimonialTrack');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+
+    function getVisibleCards() {
+        if (window.innerWidth <= 600) return 1;
+        if (window.innerWidth <= 900) return 2;
+        return 3;
+    }
+
+    function updateCarousel() {
+        const cards = document.querySelectorAll('.testimonial-card');
+        const visibleCards = getVisibleCards();
+        const maxIndex = Math.max(0, cards.length - visibleCards);
+        if (currentIndex > maxIndex) currentIndex = maxIndex;
+        if (currentIndex < 0) currentIndex = 0;
+
+        const cardWidth = cards[0]?.offsetWidth + 20 || 0;
+        track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+        const cards = document.querySelectorAll('.testimonial-card');
+        if (currentIndex < cards.length - getVisibleCards()) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+
+    window.addEventListener('resize', updateCarousel);
+
+    // FAQ ACCORDION
+    function toggleAccordion(header) {
+        const item = header.closest('.accordion-item');
+        const isOpen = item.classList.contains('open');
+        item.classList.toggle('open');
+        header.setAttribute('aria-expanded', !isOpen);
+    }
+
+    // Support clavier pour l'accordéon
+    document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleAccordion(header);
+            }
+        });
+    });
+
+    // FORMULAIRE DE CONTACT
+    const contactForm = document.getElementById('contactForm');
+    const formFeedback = document.getElementById('formFeedback');
+
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Validation simple
+        const nom = document.getElementById('nom').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+        
+        if (!nom || !email || !message) {
+            formFeedback.textContent = '⚠️ Veuillez remplir tous les champs obligatoires.';
+            formFeedback.style.color = 'var(--orange)';
+            return;
+        }
+        
+        if (!email.includes('@') || !email.includes('.')) {
+            formFeedback.textContent = '⚠️ Veuillez entrer une adresse email valide.';
+            formFeedback.style.color = 'var(--orange)';
+            return;
+        }
+        
+        formFeedback.textContent = '✅ Message envoyé avec succès !';
+        formFeedback.style.color = '#4CAF50';
+        this.reset();
+        
+        // Réinitialiser le message après 5 secondes
+        setTimeout(() => {
+            formFeedback.textContent = '';
+        }, 5000);
+    });
+
+    // Initialisation du carrousel après chargement
+    setTimeout(updateCarousel, 100);
+</script>
+</body>
+</html>
