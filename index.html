@@ -1233,7 +1233,7 @@
             flex-direction: column; 
             justify-content: space-between; 
             border: 1px solid var(--border-color);
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            transition: transform 0.1s ease, border-color 0.1s ease;
             border-radius: 6px;
         }
         .testimonial-card:hover { transform: translateY(-6px); border-color: var(--orange); }
@@ -2740,7 +2740,7 @@
     const dotsContainer = document.getElementById('testimonialDots');
     let testimonialIndex = 0;
     let testimonialInterval = null;
-    const TESTIMONIAL_DELAY = 5000;
+    const TESTIMONIAL_DELAY = 2000;
 
     function getVisibleCards() {
         if (window.innerWidth <= 600) return 1;
